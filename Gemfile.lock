@@ -124,7 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   actionview
-  bundler (~> 2)
+  bundler (~> 2.5)
   jeweler (~> 2.3)
   railties
   rdoc (~> 6.1)
@@ -133,4 +133,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   2.0.1
+   2.5.9

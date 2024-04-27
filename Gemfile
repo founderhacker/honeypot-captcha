@@ -11,7 +11,7 @@ group :development do
   gem "rspec",     "~> 3.8"
   gem "rspec-html-matchers"
   gem "rdoc",      "~> 6.1"
-  gem "bundler",   "~> 2"
+  gem "bundler",   "~> 2.5"
   gem "jeweler",   "~> 2.3"
   gem "simplecov", ">= 0"
 end
