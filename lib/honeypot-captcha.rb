@@ -23,6 +23,7 @@ module HoneypotCaptcha
       base.send :helper_method, :honeypot_string
       base.send :helper_method, :honeypot_style_class
 
+      debugger
       if base.respond_to? :before_action
         base.send :prepend_before_action, :protect_from_spam, :only => [:create, :update]
       elsif base.respond_to? :before_filter
