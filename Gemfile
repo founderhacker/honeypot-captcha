@@ -14,5 +14,4 @@ group :development do
   gem "bundler",   "~> 2.5"
   gem "jeweler",   "~> 2.3"
   gem "simplecov", ">= 0"
-  gem "debug"
 end

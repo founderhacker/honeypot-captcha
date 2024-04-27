@@ -1,5 +1,4 @@
 require 'honeypot-captcha/form_tag_helper'
-require 'debug'
 
 module HoneypotCaptcha
   module SpamProtection
@@ -16,7 +15,7 @@ module HoneypotCaptcha
     end
 
     def protect_from_spam
-      head :ok if honeypot_fields.any? { |f,l| !params[f].blank? }
+      head :ok if honeypot_fields.any? { |f,l| !params[f].blank? || params[f].nil? }
     end
 
     def self.included(base) # :nodoc:
@@ -24,7 +23,7 @@ module HoneypotCaptcha
       base.send :helper_method, :honeypot_string
       base.send :helper_method, :honeypot_style_class
 
-      # debugger
+      # removed April 2024 to avoid Rails 7.1+ 'raise_on_missing_callback_actions' exception
       # if base.respond_to? :before_action
       #   base.send :prepend_before_action, :protect_from_spam, :only => [:create, :update]
       # elsif base.respond_to? :before_filter
