@@ -1,4 +1,5 @@
 require 'honeypot-captcha/form_tag_helper'
+require 'debug'
 
 module HoneypotCaptcha
   module SpamProtection
